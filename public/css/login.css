@@ -1,0 +1,24 @@
+.card .card-header{
+    background: #dd3a43;
+    color: white;
+    margin: -17px -1px -1px -1px;
+    /* border: 1px solid; */
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* .card.card-plain .card-header {
+    background-color: #dd3a43;
+} */
+
+.boton{
+    background: #dd3a43;
+}
+
+.full-page.register-page .content:first-of-type {
+    padding-top: 3vh;
+}
+
+.form-register-bottom {
+    margin-bottom: 0.5rem;
+}
