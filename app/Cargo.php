@@ -19,4 +19,11 @@ class Cargo extends Model
         return $this->belongsToMany('App\Empresa');
 
     }
+
+    public function user()
+
+    {
+        return $this->HasMany('App\User');
+
+    }
 }

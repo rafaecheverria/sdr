@@ -11,6 +11,7 @@ import NotificationPlugin from './components/NotificationPlugin'
 // Tabs plugin. Utilizado en la página de paneles.
 import VueTabs from 'vue-nav-tabs'
 
+
 // elemento ui configuración de idioma
 import lang from 'element-ui/lib/locale/lang/es'
 import locale from 'element-ui/lib/locale'

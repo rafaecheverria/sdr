@@ -1,12 +1,12 @@
-<div class="sidebar" data-color="red" data-image="{{ asset('static/img/sidebar-1.jpg') }}">
+<div class="sidebar" data-color="black" data-image="{{ asset('static/img/sidebar-5.jpg') }}">
 
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                Ct
+                IÑ
             </a>
             <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                Creative Tim
+                INTEGRA ÑUBLE
             </a>
         </div>
         <div class="user">
@@ -30,7 +30,7 @@
                         <li>
                             <a class="profile-dropdown" href="#pablo">
                                 <span class="sidebar-mini">CV</span>
-                                <span class="sidebar-normal">Curriculum</span>
+                                <span class="sidebar-normal">Departamentos</span>
                             </a>
                         </li>
                     </ul>
@@ -38,42 +38,38 @@
             </div>
         </div>
 
-        <ul class="nav">
-        
-            @role('Postulante')
-            <br>
-            <li>
-                <div class="col-md-12">
-                    <div class="progress" rel="tooltip" title="Curriculum incompleto">
-                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="10" aria-valuemax="100" style="width:{{Auth::User()->porcentaje}}%;">
-                            <span>{{Auth::User()->porcentaje}}%</span>
-                        </div>
-                    </div>
-                    
+        <ul class="nav">          
+
+        <br>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#documentos">
+                <i class="nc-icon nc-notes"></i>
+                    <p>
+                        Documentos
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse " id="documentos">
+                    <ul class="nav">
+                        <li @click="menu=11" class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="sidebar-mini">+</span>
+                                <span class="sidebar-normal">Crear Documento</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </li>
-            <hr>
-
-            @endrole
-            
-
-            <li @click="menu=3" class="nav-item ">
-                <a href="javascript:void(0)" class="nav-link" >
-                    <i class="nc-icon nc-notes"></i>
-                    <p>
-                        Vacantes
-                    </p>
-                </a>
-            </li>
-            <li @click="menu=9" class="nav-item ">
-                <a href="javascript:void(0)" class="nav-link" >
-                    <i class="nc-icon nc-badge"></i>
-                    <p>
-                        Mi Curriculum
-                    </p>
-                   
-                </a>
                 
+                <div class="collapse " id="documentos">
+                    <ul class="nav">
+                        <li @click="menu=12" class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="sidebar-mini">VD</span>
+                                <span class="sidebar-normal">Ver Documentos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
             <li class="nav-item">
@@ -88,23 +84,24 @@
                     <ul class="nav">
                         <li @click="menu=1" class="nav-item">
                             <a href="#" class="nav-link">
-                                <span class="sidebar-mini">E</span>
-                                <span class="sidebar-normal">Empresas</span>
+                                <span class="sidebar-mini">D</span>
+                                <span class="sidebar-normal">Departamentos</span>
                             </a>
                         </li>
-                        <li @click="menu=2" class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <span class="sidebar-mini">C</span>
-                                <span class="sidebar-normal">Cargos</span>
+                    </ul>
+                </div>
+                <div class="collapse " id="mantenimiento">
+                    <ul class="nav">
+                        <li @click="menu=13" class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="sidebar-mini">A</span>
+                                <span class="sidebar-normal">Archivadores</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </li>
        
-
-            @can('ver personas')
-
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#personas">
                 <i class="nc-icon nc-circle-09"></i>
@@ -116,22 +113,14 @@
                 <div class="collapse " id="personas">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a @click="menu=7" href="javascript:void(0)" class="nav-link">
-                                <span class="sidebar-mini">PS</span>
-                                <span class="sidebar-normal">Postulantes</span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a @click="menu=8" class="nav-link" href="javascript:void(0)">
-                                <span class="sidebar-mini">MD</span>
-                                <span class="sidebar-normal">Moderador</span>
+                            <a @click="menu=10" href="javascript:void(0)" class="nav-link">
+                                <span class="sidebar-mini">FN</span>
+                                <span class="sidebar-normal">Funcionarios</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </li>
-
-            @endcan
         
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
@@ -164,9 +153,6 @@
                     </ul>
                 </div>
             </li>
-
-           
-
         </ul>
     </div>
 </div>

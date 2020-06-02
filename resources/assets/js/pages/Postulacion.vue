@@ -567,8 +567,7 @@ export default {
             arrayComunas   : [],
         }
     },
-
-   
+       
     methods:{
         format_fecha: function(d){
             return moment(d).format("dddd, D MMMM YYYY, h:mm:ss a");

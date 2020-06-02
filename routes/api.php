@@ -12,37 +12,37 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('home', 'HomeController@index');
+// Route::get('home', 'HomeController@index');
 
-//Empresas
-Route::get('empresas', 'Empresa\EmpresasController@index');
-Route::get('empresas/selectEmpresa', 'Empresa\EmpresasController@selectEmpresa');
-Route::post('empresas/registrar', 'Empresa\EmpresasController@store');
-Route::put('empresas/actualizar', 'Empresa\EmpresasController@update');
+// //Empresas
+// Route::get('empresas', 'Empresa\EmpresasController@index');
+// Route::get('empresas/selectEmpresa', 'Empresa\EmpresasController@selectEmpresa');
+// Route::post('empresas/registrar', 'Empresa\EmpresasController@store');
+// Route::put('empresas/actualizar', 'Empresa\EmpresasController@update');
 
-//Cargos
-Route::get('cargos', 'CargosController@index');
-Route::post('cargos/registrar/', 'CargosController@store');
-Route::put('cargos/actualizar', 'CargosController@update');
-Route::get('cargos/selectCargo/{id}', 'CargosController@selectCargo');
-Route::post('cargos/agregarCargosEmpresa/{id}', 'CargosController@AgregarCargosEmpresa');
+// //Cargos
+// Route::get('cargos', 'CargosController@index');
+// Route::post('cargos/registrar/', 'CargosController@store');
+// Route::put('cargos/actualizar', 'CargosController@update');
+// Route::get('cargos/selectCargo/{id}', 'CargosController@selectCargo');
+// Route::post('cargos/agregarCargosEmpresa/{id}', 'CargosController@AgregarCargosEmpresa');
 
-//Categorias
-Route::get('categorias/selectCategoria', 'CategoriasController@selectCategoria');
+// //Categorias
+// Route::get('categorias/selectCategoria', 'CategoriasController@selectCategoria');
 
-//Vacantes
-Route::post('vacantes/registrar', 'VacantesController@store');
-Route::get('vacantes', 'VacantesController@index');
+// //Vacantes
+// Route::post('vacantes/registrar', 'VacantesController@store');
+// Route::get('vacantes', 'VacantesController@index');
 
-//Sucursales
-Route::get('sucursales/selectSucursal/{id}', 'SucursalesController@selectSucursal');
-Route::post('sucursales/registrar', 'SucursalesController@store');
+// //Sucursales
+// Route::get('sucursales/selectSucursal/{id}', 'SucursalesController@selectSucursal');
+// Route::post('sucursales/registrar', 'SucursalesController@store');
 
-//Regiones
-Route::get('regiones/selectRegion', 'RegionesController@selectRegion');
+// //Regiones
+// Route::get('regiones/selectRegion', 'RegionesController@selectRegion');
 
-//Ciudades
-Route::get('comunas/selectComuna/{id}', 'ComunasController@selectComuna');
+// //Ciudades
+// Route::get('comunas/selectComuna/{id}', 'ComunasController@selectComuna');
 
 
 

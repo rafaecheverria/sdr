@@ -8,23 +8,23 @@ class CargosTableSeeder extends Seeder
     public function run()
     {
         $cargo = new Cargo;
-        $cargo->nombre = "Jefe de Terreno";
+        $cargo->nombre = "Director/a";
         $cargo->save();
 
         $cargo = new Cargo;
-        $cargo->nombre = "Auxiliar de Aseo";
+        $cargo->nombre = "Jefe";
         $cargo->save();
 
         $cargo = new Cargo;
-        $cargo->nombre = "Jefe de Operaciones";
+        $cargo->nombre = "Profesional";
         $cargo->save();
 
         $cargo = new Cargo;
-        $cargo->nombre = "Jefe de Piso";
+        $cargo->nombre = "Analista";
         $cargo->save();
 
         $cargo = new Cargo;
-        $cargo->nombre = "Promotor en Tienda";
+        $cargo->nombre = "Analista";
         $cargo->save();
 
     }

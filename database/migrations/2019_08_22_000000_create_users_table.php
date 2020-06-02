@@ -10,31 +10,33 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->Increments('id');
-            // $table->foreign('id')->references('id')->on('personas')->onUpdate('cascade')->onDelete('cascade');
-
             $table->string('rut');
             $table->string('nombres')->nullable();
             $table->string('apellidos')->nullable();
             $table->string('email')->unique();
             $table->date('fecha_nacimiento')->nullable();
+            $table->date('vigencia')->nullable();
             $table->string('direccion')->nullable();
             $table->string('genero')->nullable();
-            $table->string('discapacidad')->nullable();
-            $table->string('licencia')->nullable();
-            $table->string('movilidad')->nullable();
+            $table->string('nacionalidad')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('celular')->nullable();
+            $table->string('anexo')->nullable();
             $table->string('pais');
             $table->string('region')->nullable();
-            $table->string('educacion', 5000)->nullable();
-            $table->integer('porcentaje')->nullable();
-
             $table->string('password')->nullable();
             $table->integer('estado')->default(1);
-            $table->boolean('confirmed')->default(0);
-            $table->string('confirmation_code')->nullable();
+            $table->integer('representante')->default(0);
+            $table->unsignedInteger('cargo_id')->unsigned();
+            $table->unsignedInteger('departamento_id')->unsigned();
 
             $table->timestamps();
- 
             $table->rememberToken();
+
+            $table->foreign('cargo_id')->references('id')->on('cargos')
+            ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('departamento_id')->references('id')->on('departamentos')
+            ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

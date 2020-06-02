@@ -14,6 +14,8 @@
 
     <title>{{config('app.name')}}</title>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
     <!--     Fonts and icons     -->
@@ -40,38 +42,15 @@
     <div class="wrapper wrapper-full-page">
 
         <!-- Navbar -->
-
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
-
             <div class="container">
-
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:void(0)">Sistema de Reclutamiento Digital</a>
-                  
-                </div>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link">
-                                <i class="nc-icon nc-chart-pie-35"></i> Vacantes
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="{{ route('register') }}" class="nav-link">
-                                <i class="nc-icon nc-badge"></i> Registrarse
-                            </a>
-                        </li>
-                        <li class="nav-item  active ">
-                            <a href="{{ route('login') }}" class="nav-link">
-                                <i class="nc-icon nc-mobile"></i> Iniciar Sesion
-                            </a>
-                        </li>
-                    </ul>
+                    <a class="navbar-brand" href="javascript:void(0)">INTEGRA ÑUBLE</a>
                 </div>
             </div>
         </nav>
         <!-- End Navbar -->
-        <div class="full-page  section-image" data-color="red" data-image="static/img/full-screen-image-4.jpg">
+        <div class="full-page  section-image" data-color="black" data-image="static/img/full-screen-image-4.jpg">
             <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
             <div class="content">
                 <div class="container">

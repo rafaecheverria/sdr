@@ -12,4 +12,11 @@ class Region extends Model
 
        'id', 'nombre'
    ];
+
+   public function departamento()
+
+    {
+        return $this->HasMany('App\Departamento');
+
+    }
 }

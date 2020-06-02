@@ -258,22 +258,24 @@ class ComunasRegionesSeeder extends Seeder
         \DB::table('paises')->insert($paises);
 
         $regiones = [
-            [1,'XV - Arica y Parinacota',1],
-            [2,'I - Tarapacá',1],
-            [3,'II - Antofagasta',1],
-            [4,'III - Atacama',1],
-            [5,'IV - Coquimbo',1],
-            [6,'V - Valparaiso',1],
-            [7,'RM - Metropolitana de Santiago',1],
-            [8,'VI - Libertador General Bernardo O\'Higgins',1],
-            [9,'VII - Maule',1],
-            [10,'VIII - Biobío',1],
-            [11,'IX - La Araucanía',1],
-            [12,'XIV - Los Ríos',1],
-            [13,'X - Los Lagos',1],
-            [14,'XI - Aisén del General Carlos Ibáñez del Campo',1],
-            [15,'XII - Magallanes y de la Antártica Chilena',1],
-            [16,'XVI - Región de Ñuble',1]
+            [1,'Casa Central',1],
+            [2,'XV - Arica y Parinacota',1],
+            [3,'I - Tarapacá',1],
+            [4,'II - Antofagasta',1],
+            [5,'III - Atacama',1],
+            [6,'IV - Coquimbo',1],
+            [7,'V - Valparaiso',1],
+            [8,'RM - Metropolitana Norponiente',1],
+            [9,'RM - Metropolitana Suroriente',1],
+            [10,'VI - Libertador General Bernardo O\'Higgins',1],
+            [11,'VII - Maule',1],
+            [12,'VIII - Biobío',1],
+            [13,'IX - La Araucanía',1],
+            [14,'XIV - Los Ríos',1],
+            [15,'X - Los Lagos',1],
+            [16,'XI - Aisén del General Carlos Ibáñez del Campo',1],
+            [17,'XII - Magallanes y de la Antártica Chilena',1],
+            [18,'XVI - Región de Ñuble',1]
         ];
         $regiones = array_map(function($region) use ($now){
            return [

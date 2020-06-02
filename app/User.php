@@ -3,7 +3,6 @@
 namespace App;
 
 use Spatie\Permission\Traits\HasRoles;
-
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -15,17 +14,17 @@ class User extends Authenticatable
     public $timestamps = false;
 
     protected $fillable = [
-        'usuario', 'password'
+        'nombres', 'apellidos', 'email', 'rut', 'departamento_id', 'cargo_id'
     ];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    public function empresas()
+    public function departamento()
 
     {
-        return $this->belongsToMany('App\Empresa');
+        return $this->belongsTo('App\Departamento');
 
     }
 
@@ -50,6 +49,13 @@ class User extends Authenticatable
         }
 
         return $usuarios;
+
+    }
+
+    public function cargo()
+
+    {
+        return $this->belongsTo('App\Cargo');
 
     }
 

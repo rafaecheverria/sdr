@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Empresa;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -56,6 +57,16 @@ class UsersController extends Controller
         ];
     }
 
+    public function selectUsuarioDepto(Request $request, $id)
+    {
+        $destinatarios = User::join("cargos", "cargos.id", "=", "users.cargo_id")
+                            ->select("users.id", "users.nombres", "users.apellidos", "cargos.nombre as cargo")
+                            ->where("departamento_id", "=", $id)->orderBy("cargo_id", "ASC")->get();
+
+        return['destinatarios' => $destinatarios];
+
+    }
+
     public function selectEmpresas(Request $request, $id)
     {
         if (!$request->ajax()) return redirect('/');
@@ -103,5 +114,15 @@ class UsersController extends Controller
         return[
             'mensage' => "Se agregaron los empresas exitosamente!",
         ];
+    }
+
+    public function selectRemitente(Request $request)
+    {
+        if (!$request->ajax()) return redirect('/');
+
+                //  TRAR A TODOS LOS USUARIOS QUE PERTENECEN AL DEPARTAMENTO DEL USUARIO EN SESIÓN.
+                $remitente = User::select('id', 'nombres', 'apellidos')->where("departamento_id", Auth::user()->departamento_id)->where("estado",1)->get();  
+    
+        return['remitente' => $remitente];
     }
 }

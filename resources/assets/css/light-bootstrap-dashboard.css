@@ -859,13 +859,13 @@ input:focus {
 
 .sidebar[data-color="black"]:after,
 .bootstrap-navbar[data-color="black"]:after {
-    background: #797979;
-    background: -moz-linear-gradient(top, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #797979), color-stop(100%, rgba(121, 121, 121, 0.7)));
-    background: -webkit-linear-gradient(top, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
-    background: -o-linear-gradient(top, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
-    background: -ms-linear-gradient(top, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
-    background: linear-gradient(to bottom, #797979 0%, rgba(121, 121, 121, 0.7) 100%);
+    background: #27252B;
+    background: -moz-linear-gradient(top, #27252B 0%, rgba(121, 121, 121, 0.7) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #27252B), color-stop(100%, rgba(121, 121, 121, 0.7)));
+    background: -webkit-linear-gradient(top, #27252B 0%, rgba(121, 121, 121, 0.7) 100%);
+    background: -o-linear-gradient(top, #27252B 0%, rgba(121, 121, 121, 0.7) 100%);
+    background: -ms-linear-gradient(top, #27252B 0%, rgba(121, 121, 121, 0.7) 100%);
+    background: linear-gradient(to bottom, #27252B 0%, rgba(121, 121, 121, 0.7) 100%);
     background-size: 150% 150%;
 }
 

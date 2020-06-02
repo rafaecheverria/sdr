@@ -32,7 +32,7 @@ let components = {
   DropDown,
   FadeRenderTransition,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
 }
 export {
   Checkbox,
@@ -48,7 +48,7 @@ export {
   DropDown,
   FadeRenderTransition,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem,
 }
 
 export default components
